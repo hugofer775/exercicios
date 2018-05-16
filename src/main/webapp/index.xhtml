@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+	
+<h:head>
+	<h:outputStylesheet library="css" name="styles.css"/>
+	<h:outputScript library="javascript" name="checkPassword.js"/>
+ </h:head>
+<h:body>
+		<h:form>
+		<h:panelGrid columns="2" columnClasses="evenColumns, oddColumns">
+				<h:outputLabel value="Name:" />
+				<h:inputText id="name" value="#{bCadastro.cadastro.name}"/>
+				<h:outputLabel value="Password:" />
+				<h:inputSecret id="password" value="#{bCadastro.cadastro.password}"/>
+				<h:outputLabel value="Confirm Password:" />
+				<h:inputSecret id="passwordConfirm" value="#{bCadastro.cadastro.password2}"/>
+			</h:panelGrid>
+			<h:commandButton type="button" value="Submit Form" onclick="checkPassword(this.form)"/>
+		</h:form>
+</h:body>
+</html>
